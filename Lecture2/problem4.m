@@ -1,4 +1,4 @@
-function Recognition002_Digits()
+function Recognition004_Digits()
 fprintf('\n Load du lieu train');
 imgTrainAll= loadMNISTImages('./train-images.idx3-ubyte');
 lblTrainAll= loadMNISTLabels('./train-labels.idx1-ubyte');
@@ -24,7 +24,7 @@ figure;
 img=imgTestAll(:,nNumber);
 
 img2D=reshape(img,28,28);
-strLabelImage=num2str(lblTrainLabelAll(nNumber));
+strLabelImage=num2str(lblTestAll(nNumber));
 
 strLabelImage=[strLabelImage,'(',num2str(nNumber),')'];
 imshow(img2D);
